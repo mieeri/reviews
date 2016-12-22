@@ -1,0 +1,19 @@
+<%= link_to "リンク名", new_dorama_path(@dorama) %>
+<%= form_for @dorama do |f| %>
+
+  <div class="field">
+    <%= f.label :story, "あらすじ" %>
+    <%= f.text_field :story %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title, "タイトル" %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "登録する" %>
+  </div>
+<% end %>
+
+

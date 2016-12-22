@@ -1,0 +1,2 @@
+class Dorama < ApplicationRecord
+end

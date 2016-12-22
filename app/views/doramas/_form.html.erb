@@ -1,0 +1,17 @@
+<%= form_for(dorama) do |f| %>
+  <% if dorama.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dorama.errors.count, "error") %> prohibited this dorama from being saved:</h2>
+
+      <ul>
+      <% dorama.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

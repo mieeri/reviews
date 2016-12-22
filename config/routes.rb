@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-	# test
+  resources :doramas
 end
