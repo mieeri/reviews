@@ -15,8 +15,6 @@ class DoramasController < ApplicationController
 
     #
     # [:dorama]ってのが抜けてたからだめやった。paramsの中のdoramaの中にtitleとかstoryとかがまとまって入ってたねん。
-    #
-    @dorama = Dorama.new(title: params[:title], story: params[:story]) # ←以前の書き方
     @dorama = Dorama.new(title: params[:dorama][:title], story: params[:dorama][:story]) # ←正解の書き方
 
     #
