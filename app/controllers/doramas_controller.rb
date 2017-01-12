@@ -1,6 +1,12 @@
 class DoramasController < ApplicationController
   def index
     @doramas = Dorama.all
+
+    if params[:id].present?
+    set_dorama
+    else
+    @dorama = Dorama.new
+    end
   end
 
   def show
@@ -12,21 +18,25 @@ class DoramasController < ApplicationController
   end
 
   def create
-
-    #
-    # [:dorama]ってのが抜けてたからだめやった。paramsの中のdoramaの中にtitleとかstoryとかがまとまって入ってたねん。
-    @dorama = Dorama.new(title: params[:dorama][:title], story: params[:dorama][:story]) # ←正解の書き方
-
-    #
-    # 正解の書き方で通るんやけど、さらに安全に書くには以下の書き方がいい。理由はしたのdorama_paramsに書いてる。
-    #
     @dorama = Dorama.new(dorama_params)
-
-
     if @dorama.save
       redirect_to @dorama, notice: "登録されました。"
     else
       render 'new'
+   end
+  end
+
+  def edit
+    @dorama = Dorama.find(params[:id])
+  end
+
+  def update
+    @dorama = Dorama.find(params[:id])
+
+    if @dorama.update(dorama_params)
+      redirect_to @dorama
+    else
+      render :edit, status: unprocessable_entity
     end
   end
 

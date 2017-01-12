@@ -1,4 +1,15 @@
+  <h1>ドラマ一覧</h1>
 <% @doramas.each do |dorama| %>
   <%= link_to dorama.title, dorama_path(dorama) %>
-<% end %>
+
+
+  <td><%= dorama.story %></td>
+      <td><%= link_to '詳細', dorama %></td>
+      <td><%= link_to '編集', edit_dorama_path(dorama) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to '新しい投稿', new_dorama_path %>
+
 
