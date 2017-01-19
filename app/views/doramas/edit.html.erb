@@ -1,10 +1,6 @@
 <h1>投稿を編集</h1>
 
-<!--doramas_pathではなくdorama_pathでした-->
-<!--localhost:3000/rails/info/routesでroutes見れるんやけど、そこで見たら登録はdorama_pathで更新がdorama_pathってことがわかる。-->
-<!--あと、resourcesでroutesを自動生成した場合はmethodは決められてるから指定しなくてもいい-->
-
-<%= form_for @dorama, url: dorama_path do |f| %>
+<%= form_for :dorama, url: doramas_path, method: :patch do |f| %>
   <% if @dorama.errors.any? %>
     <div id="error_explanation">
       <h2><%= @dorama.errors.count %>件のエラーが発生したため保存ができませんでした。</h2>
@@ -25,6 +21,13 @@
     <%= f.label :title, "タイトル" %><br>
     <%= f.text_area :title, cols: 60, rows: 8 %>
   </p>
+
+<%= form_for @dorama,:url => {:action => 'update'}, :html => {:multipart => true} do |f| %>
+
+  <%= f.file_field :image %><br>
+  <%= f.submit %>
+
+<% end %>
 
   <p>
     <%= f.submit %>

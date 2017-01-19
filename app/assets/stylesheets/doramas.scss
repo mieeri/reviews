@@ -1,3 +1,72 @@
 // Place all the styles related to the doramas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html,body{
+  text-align: center;
+}
+
+.wrapper {
+  background-color: #ffffff;
+}
+
+.header {
+  background-color: #ffffff
+}
+
+.pickup {
+ h2 {
+  font-size: 20px;
+  list-style-type : none;
+  padding:5px 10px;
+  border-bottom:1px solid #84b2e0;
+ }
+}
+
+.main {
+  width: 70%
+}
+
+.ranking {
+  li {
+  list-style-type : none;
+  padding:5px 10px;
+  border-bottom:1px solid #84b2e0;
+ }
+}
+
+span.img {
+  float: left;
+  margin: 0 0 0 0;
+}
+
+h3.title{
+  padding: 30px;
+}
+
+.contents {
+  text-align: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.detail{
+  text-align: center;
+  width: 80%;
+}
+
+.tweet{
+  width:200px;
+  height:100px;
+  margin:5px;
+  padding:10px; border:1px solid black;
+  background-color: l#6495ED;
+}
+
+.footer {
+  background-color: #eee8aa;
+}
+
+

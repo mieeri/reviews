@@ -1,4 +1,18 @@
+<%= @dorama.image %>
+<div class="detail">
+  <span class="img"><a href="/doramas"><%= image_tag "nigehazi.png" %></a>
+  </span>
+  <div class="tweet">ツイートを見る</div>
+
+
+
 <%= @dorama.title %>
 <%= @dorama.story %>
-<%= link_to '戻る', doramas_path %>
-| <%= link_to '編集', edit_dorama_path(@dorama) %>
+
+<%= @dorama.date %>
+<%= @dorama.time %>
+
+<% @dorama.casts.each do |cast| %>
+<%= cast.name %>
+<% end %>
+</div>

@@ -15,5 +15,12 @@
     <%= f.submit %>
   </div>
 
+  <div class="upload">
+  <%= form_for(@dorama) do |f| %>
+      <%=f.label :image,"ジャケ写" %>
+      <%= f.file_field :image %>
+    <% end %>
+  </div>
+
   <td><%= link_to 'Edit', doramas_path(id: dorama.id) %></td>
 <% end %>

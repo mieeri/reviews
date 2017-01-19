@@ -40,6 +40,13 @@ class DoramasController < ApplicationController
     end
   end
 
+  def destroy
+    @dorama = Dorama.find(params[:id])
+    @dorama.destroy
+
+    redirect_to doramas_path
+  end
+
   #
   # ↓こいつはユーザーのリクエストしてきたパラメーターをまとめてるもの。と同時に悪意のあるパラメータをなげられないようにpermitでリクエストできるものを制限してる。
   #
