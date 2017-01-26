@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170118134447) do
+ActiveRecord::Schema.define(version: 20170122090825) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 20170118134447) do
     t.string   "date"
     t.string   "time"
     t.integer  "tweet_number"
+    t.string   "hash_tag"
   end
 
 end

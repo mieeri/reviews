@@ -1,7 +1,7 @@
 ActiveAdmin.register Dorama do
 
  permit_params do
-     permitted = [:title,:story,:image,:date,:time]
+     permitted = [:title, :story, :image, :date, :time, :hash_tag]
    end
 
 # See permitted parameters documentation:

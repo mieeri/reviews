@@ -1,7 +1,8 @@
-<%= @dorama.image %>
+<%= @tweets.count %>
+<%= image_tag @dorama.image %>
+
 <div class="detail">
-  <span class="img"><a href="/doramas"><%= image_tag "nigehazi.png" %></a>
-  </span>
+
   <div class="tweet">ツイートを見る</div>
 
 
@@ -14,5 +15,12 @@
 
 <% @dorama.casts.each do |cast| %>
 <%= cast.name %>
+
+
+<% @tweets.take(100).each do |tweet| %>
+  <%= tweet.text %>
+  <br>
+  <br>
+<% end %>
 <% end %>
 </div>
