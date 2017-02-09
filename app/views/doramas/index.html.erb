@@ -3,34 +3,19 @@
     <h2>ツイート数ランキング</h2>
   </div>
   <div class="ranking">
-    <div class="no01">
-      <ul>
-      <% @doramas.each do |doratter| %>
-        <li>
-          <!--  <span class="img"><%= link_to image_tag doratter.image %></span> -->
-            <span class="img"><%= link_to image_tag dorama_path(doratter.id) %></span>
-            <div class="contents">
-            <h3 class="title"><%= doratter.title %></h3><br>
-            <h6 class="date"><%= doratter.date %></h6><br>
-            <h6 class="time"><%= doratter.time %></h6><br>
-            <br class="clear">
-
-            <ul class="posts">
-              <%= link_to doratter do %>
-                <li>
-                <%= image_tag dorama_path(doratter.id) %>
-                <span class="doratter"><%= doratter.title %></span>
-                <span class="date"><%= doratter.date %></span>
-                <span class="time"><%= doratter.time %></span>
-                </li>
-              <% end %>
-            </ul>
-
-            </div>
-        </li>
-        <% end %>
-      </ul>
-    </div>
+    <% @doramas.each do |doratter| %>
+    <ul class="posts">
+      <%= link_to dorama_path doratter do %>
+      <li>
+        <%= image_tag doratter.image %>
+        <span class="doratter"><%= doratter.title %></span>
+        <span class="date"><%= doratter.date %></span>
+        <span class="time"><%= doratter.time %></span>
+        <span class="tweet_number"><%= doratter.tweet_number %></span>
+      </li>
+      <% end %>
+    </ul>
+    <% end %>
   </div>
 </div>
 

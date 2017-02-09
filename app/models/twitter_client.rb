@@ -1,4 +1,5 @@
 require 'twitter'
+require 'active_record'
 
 class TwitterClient
   def self.get_client

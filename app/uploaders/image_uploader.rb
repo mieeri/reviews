@@ -5,7 +5,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  storage :fog
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -19,10 +19,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   process :resize_to_limit => [200, 200]
 
   process :convert => 'jpg'
-
-  version :thumb do
-     process :resize_to_fill => [40, 40, gravity = ::Magick::CenterGravity]
-   end
 
    def extension_white_list
     %w(jpg jpeg gif png)
