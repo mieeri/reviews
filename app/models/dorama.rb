@@ -4,6 +4,4 @@ class Dorama < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
-  scope :by_tweet_number, -> { where(tweet_number: true) }
-
 end

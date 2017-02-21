@@ -1,7 +1,6 @@
 class DoramasController < ApplicationController
   def index
-    @doramas = Dorama.all
-    @popular_dorama = Dorama.by_tweet_number.count
+    @doramas = Dorama.order(tweet_number: :desc)
 
     if params[:id].present?
     set_dorama

@@ -3,15 +3,15 @@
     <h2>ツイート数ランキング</h2>
   </div>
   <div class="ranking">
-    <% @doramas.each do |doratter| %>
+    <% @doramas.each do |dorama| %>
     <ul class="posts">
-      <%= link_to dorama_path doratter do %>
+      <%= link_to dorama_path dorama do %>
       <li>
-        <%= image_tag doratter.image %>
-        <span class="doratter"><%= doratter.title %></span>
-        <span class="date"><%= doratter.date %></span>
-        <span class="time"><%= doratter.time %></span>
-        <span class="tweet_number"><%= doratter.tweet_number %></span>
+        <%= image_tag dorama.image %>
+        <span class="title"><%= dorama.title %></span>
+        <span class="date"><%= dorama.date %></span>
+        <span class="time"><%= dorama.time %></span>
+        <span class="tweet_number"><%= dorama.tweet_number %></span>
       </li>
       <% end %>
     </ul>
