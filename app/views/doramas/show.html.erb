@@ -1,26 +1,25 @@
-<%= @tweets.count %>
+<%= @dorama.tweet_number %>
 <%= image_tag @dorama.image %>
 
 <div class="detail">
 
-  <div class="tweet">ツイートを見る</div>
+  <%= @dorama.title %>
+  <%= @dorama.story %>
+
+  <%= @dorama.date %>
+  <%= @dorama.time %>
+
+  <% @dorama.casts.each do |cast| %>
+  <%= cast.name %>
+  <% end %>
 
 
-
-<%= @dorama.title %>
-<%= @dorama.story %>
-
-<%= @dorama.date %>
-<%= @dorama.time %>
-
-<% @dorama.casts.each do |cast| %>
-<%= cast.name %>
-
-
-<% @tweets.take(10).each do |tweet| %>
+  <% @tweets.each do |tweet| %>
   <%= tweet.text %>
   <br>
   <br>
-<% end %>
-<% end %>
+  <% end %>
+
+  <div class="tweet">ツイートを見る</div>
+
 </div>
