@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Reviews</title>
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
+<head>
+  <meta charset="utf-8">
+  <title>Reviews</title>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= csrf_meta_tags %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= csrf_meta_tags %>
+</head>
 
-  <body>
+<body>
 <!--   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p> -->
 
   <div class="wrapper">
-    <div class="header">
-     <!-- <h1 id="logo"><a href="/doramas"><%= image_tag "" %></a></h1>-->
-     <h1 class="title"><a href="/doramas">Doratter</a></h1>
-    </div>
-      <div class="main">
-       <%= yield %>
+    <div class="header-fixed">
+      <div class="header">
+       <h1 class="title"><a href="/doramas">doratter</a></h1>
      </div>
-    <div class="footer">
-        利用規約｜プライバシーポリシー
-    </div>
+   </div>
+   <div class="main">
+     <%= yield %>
+   </div>
+   <div class="footer">
+    <span class="other">
+      利用規約｜プライバシーポリシー<br>
+      お問い合わせ<br>
+    </span>
+    <span class="copyright">
+      © 2017 Doratter
+    </span>
   </div>
+</div>
 
-  </body>
+</body>
+<link rel="stylesheet" href="./icon.css" type="text/css">
 </html>

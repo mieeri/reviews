@@ -11,7 +11,6 @@ class DoramasController < ApplicationController
 
   def show
     @dorama = Dorama.find(params[:id])
-    @tweets = TwitterClient.get_client.search("#" + "#{@dorama.hash_tag} -rt",lang: "ja").take(10)
   end
 
   def new

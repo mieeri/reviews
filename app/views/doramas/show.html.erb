@@ -1,25 +1,34 @@
-<%= @dorama.tweet_number %>
-<%= image_tag @dorama.image %>
-
 <div class="detail">
+  <div class="info">
+    <span class="title"><%= @dorama.title %></span><br>
+    <span class="date"><%= @dorama.date %></span>
+    <span class="time"><%= @dorama.time %></span>
+  </div>
+  <p><%= image_tag @dorama.image %></p>
 
-  <%= @dorama.title %>
-  <%= @dorama.story %>
+  <div class="tweet_button">
+    <%= link_to 'ツイートをみる', tweet_path %><br>
+    <span class="tweet_number"><%= @dorama.tweet_number %>件</span>
+  </div>
 
-  <%= @dorama.date %>
-  <%= @dorama.time %>
-
-  <% @dorama.casts.each do |cast| %>
-  <%= cast.name %>
-  <% end %>
-
-
-  <% @tweets.each do |tweet| %>
-  <%= tweet.text %>
-  <br>
-  <br>
-  <% end %>
-
-  <div class="tweet">ツイートを見る</div>
-
+  <div class="tab-contents">
+    <input type="radio" id="tab1" name="tab" checked >
+    <label for="tab1">Story</label>
+    <input type="radio" id="tab2" name="tab">
+    <label for="tab2">Cast</label>
+    <div class="tab-box">
+      <div id="tabView1">
+        <div class="story"><%= @dorama.story %></div>
+      </div>
+      <div id="tabView2">
+        <ul class="tweet_cast">
+          <% @dorama.casts.each do |cast| %>
+          <li>
+            <%= cast.name %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>

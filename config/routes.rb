@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root "doramas#new"
   resources :doramas
+
+  root "photos#show"
+  resources :tweets
 end
