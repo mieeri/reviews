@@ -1,0 +1,13 @@
+<h1 class="headline">
+最新の20件
+</h1>
+<div class="tweet">
+  <ul class="tweet_list">
+    <% @tweets.each do |tweet| %>
+    <li>
+      <%= tweet.text %>
+      <%= image_tag(tweet.media[0]["media_url"]) if tweet.media.any? %>
+    </li>
+    <% end %>
+  </ul>
+</div>

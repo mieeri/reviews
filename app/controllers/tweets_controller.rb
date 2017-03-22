@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-   def show
-    # @tweets = TwitterClient.get_client.search("#" + "#{@dorama.hash_tag} -rt",lang: "ja").take(2)
+  def index
+    @tweets = TwitterClient.get_client.search("#アライフ", lang: "ja", result_type: "recent", since_id: 0, exclude: "retweets").take(20)
   end
 end
