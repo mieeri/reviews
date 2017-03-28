@@ -2,7 +2,8 @@ require File.expand_path(File.dirname(__FILE__) + "/environment")
 set :output, 'log/cron.log'
 set :environment, :development
 
-every 5.minutes do
+every 1.minutes do
+  Rails.logger.debug("schedule内実行")
   rake "tweet:get_tweet_number"
 end
 
