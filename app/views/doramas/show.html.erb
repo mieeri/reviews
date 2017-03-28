@@ -4,10 +4,10 @@
     <span class="date"><%= @dorama.date %></span>
     <span class="time"><%= @dorama.time %></span>
   </div>
-  <p><%= image_tag @dorama.image %></p>
+  <div class="img"><%= image_tag @dorama.image %></div>
 
   <div class="tweet_button">
-    <%= link_to 'ツイートをみる', tweet_path %><br>
+    <%= link_to 'ツイートをみる', dorama_tweets_path(@dorama) %><br>
     <span class="tweet_number"><%= @dorama.tweet_number %>件</span>
   </div>
 

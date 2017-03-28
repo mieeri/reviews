@@ -1,7 +1,7 @@
 <div class="main">
-  <div class="pickup">
-    <p>RANKING</p>
-  </div>
+  <h1 class="headline">
+    RANKING
+  </h1>
   <div class="ranking">
     <ul class="posts">
       <% @doramas.each_with_index do |dorama, i| %>
@@ -11,15 +11,15 @@
           <span class="icon_number"><%= "#{i + 1}."%></span>
           <% icon_number = "#{i + 1}" %>
           <span class="ranking_icon">
-          <% if icon_number == 1.to_s %>
-          <%= image_tag 'icon1.png' %>
-          <% elsif icon_number == 2.to_s %>
-          <%= image_tag 'icon2.png' %>
-          <% elsif icon_number == 3.to_s %>
-          <%= image_tag 'icon3.png' %>
-          <% else %>
-          <% end %>
-        </span>
+            <% if icon_number == 1.to_s %>
+            <%= image_tag 'icon1.png' %>
+            <% elsif icon_number == 2.to_s %>
+            <%= image_tag 'icon2.png' %>
+            <% elsif icon_number == 3.to_s %>
+            <%= image_tag 'icon3.png' %>
+            <% else %>
+            <% end %>
+          </span>
         </p>
         <%= image_tag dorama.image %><br>
         <span class="title"><%= dorama.title %></span><br>

@@ -1,0 +1,19 @@
+
+.footer {
+  text-align: center;
+  background-color: $black;
+  color: $white;
+  padding:10px 10px;
+  border-width: medium;
+  border-top: 1px solid;
+  .other{
+    display:block;
+    margin: 5px 0px 20px 0px;
+    color: $light-gray;
+  }
+  .copyright{
+    color: $light-gray;
+    padding-top: 30px;
+    font-size: 70%;
+  }
+}

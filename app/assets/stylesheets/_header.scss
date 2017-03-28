@@ -1,0 +1,25 @@
+html,body{
+  padding-top: 34px;
+}
+
+.header-fixed{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 10;
+}
+
+.header {
+  background-color: $black;
+  padding-top: 10px;
+  border-bottom: 1px solid;
+  a {
+    margin-left: 15px;
+    font-size: 28px;
+    text-decoration: none;
+    color: $white;
+    font-family: 'Nunito', sans-serif;
+    text-align: left;
+  }
+}
+
