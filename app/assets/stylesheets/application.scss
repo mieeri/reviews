@@ -8,16 +8,13 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
-*= require_tree .
- *= require_self
  */
 
-@import "_button";
 @import "_colors";
+@import "_button";
 @import "_doramas";
 @import "_footer";
 @import "_header";
 @import "_headline";
 @import "_tab";
 @import "_tweets";
-@import "_active_admin";
