@@ -1,0 +1,61 @@
+$silver: #C0C0C0;
+$white: #FFFFFF;
+$light-gray: #D3D3D3;
+$black: #000000;
+$deep-gray: #444444;
+
+
+.tab-contents input[type="radio"] {
+  display: none;
+  margin : 0 auto;
+}
+
+.tab-contents {
+  padding: 0 15px 15px 15px;
+  .story {
+    margin: 10px;
+    text-align: center;
+  }
+  .tweet_cast li {
+    margin: 10px;
+    text-align: center;
+    list-style-type: none
+  }
+}
+
+ .tab-contents input:checked + label {
+  color: $black;
+  opacity: 1;
+}
+
+.tab-contents label {
+  width: 50%;
+  font-size: 13px;
+  font-weight: bold;
+  border-bottom: $deep-gray solid 3px;
+  list-style: none;
+  text-align: center;
+  float: left;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  opacity: 0.1;
+}
+
+.tab-contents > .tab-box > div {
+  display: none;
+}
+
+#tab1:checked ~ .tab-box > #tabView1 ,
+#tab2:checked ~ .tab-box > #tabView2 {
+  display: block;
+}
+
+.tab-box #tabView1 {
+  opacity: 0.1;
+  text-align: center;
+}
+
+#tab1:checked ~ .tab-box > #tabView1:nth-child(1),
+#tab2:checked ~ .tab-box > #tabView2:nth-child(2) {
+  opacity: 1;
+}

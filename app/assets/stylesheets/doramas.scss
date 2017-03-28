@@ -2,54 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-html,body{
-  padding-top: 34px;
-}
-
-.wrapper {
-  background-color: white;
-}
-
-.header-fixed{
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  z-index: 10;
-}
-
-.header {
-  background-color: black;
-  padding-top: 10px;
-  border-width: medium;
-  border-color: #C0C0C0;
-  border-bottom: 1px solid #C0C0C0;
-  a {
-    margin-left: 15px;
-    font-size: 28px;
-    text-decoration: none;
-    color: white;
-    font-family: 'Nunito', sans-serif;
-    text-align: left;
-  }
-}
-
-.pickup {
-  margin: 0 auto;
-  p {
-  text-align: center;
-  font-size: 15px;
-  font-family: 'Nunito', sans-serif;
-  list-style-type : none;
-  padding:10px 10px;
-  border-bottom:1px solid #C0C0C0;
-  }
-}
+$silver: #C0C0C0;
+$white: #FFFFFF;
+$light-gray: #D3D3D3;
+$black: #000000;
+$deep-gray: #444444;
 
 .main {
   text-align: center;
-  margin-right: auto;
-  margin-left: auto;
+  margin: auto;
 }
 
 .ranking {
@@ -57,14 +18,9 @@ html,body{
     width: 95%;
     margin: 0 auto;
     list-style-type : none;
-    padding:25px 0px;
-    border-bottom:1px solid #C0C0C0;
-    color: #333333;
+    padding: 25px 0px;
+    border-bottom: 1px solid $silver;
     position: relative;
-  }
-  li:last-child {
-   list-style: none;
-   border: 0;
   }
   a {
     text-decoration: none;
@@ -72,20 +28,20 @@ html,body{
   img {
     margin: 0 auto;
   }
-  span.title {
+  .title {
     font-weight: bold;
     font-size: 130%;
-    color: black;
+    color: $black;
   }
-  span.date {
-    color: black;
+  .date {
+    color: $black;
   }
-  span.time {
-    color: black;
+  .time {
+    color: $black;
   }
 
-  span.tweet_number{
-    color: black;
+  .tweet_number{
+    color: $black;
   }
   p {
     .icon_number {
@@ -94,11 +50,10 @@ html,body{
       left: 22px;
       font-size: 16px;
       font-weight: bold;
-      color: black;
+      color: $black;
     }
     .ranking_icon {
       position: absolute;
-
       top: 28px;
       left: 18px;
       img{
@@ -109,157 +64,22 @@ html,body{
  }
 }
 
-
-
 .info{
-  // width: 100%;
   margin: 0 auto;
   padding: 10px 20px;
   text-align: left;
-  span.title{
+  .title{
     font-size: 17px;
-    margin-bottom: 0;
   }
-  span.date{
+  .date{
     margin-left: 15px;
   }
 }
 
 .detail {
-  p {
+  .img {
     margin: 5px 10px;
     text-align: center;
   }
 }
-
-.tweet_button {
-  position: relative;
-  margin: 10px auto;
-  height: 30%;
-  border-top: 1px solid #CCC;
-  border-bottom: 2px solid #CCC;
-  padding: 3px;
-  text-align: center;
-  background-color: #DCDCDC;
-  span.tweet_number{
-    font-size: 10px;
-  }
-}
-
-.tweet_button a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  margin-top: 3px;
-  color: black;
-}
-
-.tab-contents input[type="radio"] {
-  display: none;
-  margin : 0 auto;
-}
-
-.tab-contents {
-  padding: 0 15px 15px 15px;
-  .story {
-    margin: 20px;
-    text-align: center;
-  }
-  .tweet_cast li {
-    margin: 20px;
-    text-align: center;
-    list-style-type: none
-  }
-}
-
- .tab-contents input:checked + label {
-  color: #000000;
-  opacity: 1;
-}
-
-.tab-contents label {
-  width: 50%;
-  font-size: 13px;
-  font-weight: bold;
-  border-bottom: #444 solid 3px;
-  list-style: none;
-  text-align: center;
-  float: left;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  opacity: 0.1;
-}
-
-.tab-contents > .tab-box > div {
-  display: none;
-}
-
-#tab1:checked ~ .tab-box > #tabView1 ,
-#tab2:checked ~ .tab-box > #tabView2 {
-  display: block;
-}
-
-.tab-box #tabView1 {
-  opacity: 0.1;
-  text-align: center;
-}
-
-#tab1:checked ~ .tab-box > #tabView1:nth-child(1),
-#tab2:checked ~ .tab-box > #tabView2:nth-child(2) {
-  opacity: 1;
-}
-
-.headline{
-  text-align: center;
-  font-size: 15px;
-  font-family: 'Nunito', sans-serif;
-  list-style-type : none;
-  padding:10px 10px;
-  border-bottom:1px solid #C0C0C0;
-}
-
-.tweet {
-  width: 95%;
-  margin: auto;
-  .tweet_list {
-    li {
-      list-style-type : none;
-      margin: 25px 25px;
-      padding: 20px;
-      border:1px solid #C0C0C0;
-      color: #333333;
-      position: relative;
-      text-align: left;
-    }
-    img {
-      width: 100%;
-      height: auto;
-      margin-top: 10px;
-    }
-  }
-}
-
-.footer {
-  text-align: center;
-  background-color: black;
-  color:white;
-  padding:10px 10px;
-  border-width: medium;
-  border-color: #C0C0C0;
-  border-top: 1px solid #C0C0C0;
-  span.other{
-    display:block;
-    margin: 5px 0px 20px 0px;
-    color:  #D3D3D3;
-  }
-  span.copyright{
-    color:  #D3D3D3;
-    padding-top: 30px;
-    font-size: 70%;
-  }
-}
-
 

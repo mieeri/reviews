@@ -1,3 +1,30 @@
 // Place all the styles related to the tweets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$silver: #C0C0C0;
+$white: #FFFFFF;
+$light-gray: #D3D3D3;
+$black: #000000;
+$deep-gray: #444444;
+
+.tweet {
+  width: 95%;
+  margin: auto;
+  .tweet_list {
+    li {
+      list-style-type : none;
+      margin: 25px 25px;
+      padding: 20px;
+      border:1px solid $silver;
+      color: $black;
+      position: relative;
+      text-align: left;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin-top: 10px;
+    }
+  }
+}
